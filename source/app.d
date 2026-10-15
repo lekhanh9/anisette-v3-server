@@ -36,7 +36,8 @@ __gshared string libraryPath;
 __gshared string provisioningPath;
 
 enum brandingCode = format!"anisette-v3-server v%s"(provisionVersion);
-enum clientInfo = "<MacBookPro13,2> <macOS;13.1;22C65> <com.apple.AuthKit/1 (com.apple.akd/1.0)>";
+enum clientInfo = "<PC> <Windows;6.2(0,0);9200> <com.apple.AuthKit/1 (com.apple.iTunes/12.12.4.1)>";
+enum userAgent = "akd/1.0 CFNetwork/808.1.4";
 enum dsId = -2;
 
 __gshared ADI v1Adi;
@@ -232,7 +233,7 @@ class AnisetteService {
 		log.info("[<<] anisette-v3 /v3/client_info");
 		JSONValue responseJson = [
 			"client_info": clientInfo,
-			"user_agent": "akd/1.0 CFNetwork/808.1.4"
+			"user_agent": userAgent
 		];
 
 		res.headers["Implementation-Version"] = brandingCode;
