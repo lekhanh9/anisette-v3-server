@@ -36,7 +36,7 @@ __gshared string libraryPath;
 __gshared string provisioningPath;
 
 enum brandingCode = format!"anisette-v3-server v%s"(provisionVersion);
-enum clientInfo = "<MacBookPro18,1> <Mac OS X;14.5;23F79> ￹<com.apple.AuthKit/1 (com.apple.akd/1.0)>";
+enum clientInfo = "<MacBookPro18,1> <Mac OS X;14.5;23F79> <com.apple.AuthKit/1 (com.apple.akd/1.0)>";
 enum userAgent = "akd/1.0 CFNetwork/1410.0.3 Darwin/22.6.0";
 enum dsId = -2;
 
